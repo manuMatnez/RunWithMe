@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://scripts/Exit.gd" type="Script" id=1]
+[ext_resource path="res://assets/menu/exit.png" type="Texture" id=2]
+[ext_resource path="res://assets/menu/exitPressed.png" type="Texture" id=3]
+[ext_resource path="res://assets/fonts/strippe/strippe.fnt" type="BitmapFont" id=4]
+
+[node name="Exit" type="Node2D"]
+
+script/script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ExitButton" type="TextureButton" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -300.0
+margin/top = 600.0
+margin/right = -210.0
+margin/bottom = 690.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 2 )
+textures/pressed = ExtResource( 3 )
+params/resize_mode = 0
+params/scale = Vector2( 0.3, 0.3 )
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Exit" type="Label" parent="ExitButton"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 130.0
+margin/top = 20.0
+margin/right = 300.0
+margin/bottom = 73.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Exit"
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+

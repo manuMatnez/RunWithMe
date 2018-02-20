@@ -1,0 +1,280 @@
+[gd_scene load_steps=13 format=1]
+
+[ext_resource path="res://scripts/Menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/menu/menuBg.png" type="Texture" id=2]
+[ext_resource path="res://assets/fonts/strippe/strippe.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://assets/menu/play.png" type="Texture" id=4]
+[ext_resource path="res://assets/menu/playPressed.png" type="Texture" id=5]
+[ext_resource path="res://assets/menu/options.png" type="Texture" id=6]
+[ext_resource path="res://assets/menu/optionsPressed.png" type="Texture" id=7]
+[ext_resource path="res://assets/menu/info.png" type="Texture" id=8]
+[ext_resource path="res://assets/menu/infoPressed.png" type="Texture" id=9]
+[ext_resource path="res://scenes/Mute.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/menu/howPlay.png" type="Texture" id=11]
+[ext_resource path="res://assets/menu/howPlayPressed.png" type="Texture" id=12]
+
+[node name="Menu" type="Node2D"]
+
+script/script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Controls" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="Background" type="Node2D" parent="Controls"]
+
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Image" type="TextureFrame" parent="Controls/Background"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1280.0
+margin/bottom = 720.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Main" type="Node2D" parent="Controls"]
+
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Title" type="Label" parent="Controls/Main"]
+
+rect/scale = Vector2( 2.5, 2.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -625.0
+margin/top = 42.0
+margin/right = -125.0
+margin/bottom = 95.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.917969, 0.787591, 0.276108, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "RunWithMe"
+align = 1
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Buttons" type="Node2D" parent="Controls"]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Play" type="TextureButton" parent="Controls/Buttons"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -159.0
+margin/top = 213.0
+margin/right = -69.0
+margin/bottom = 303.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+textures/pressed = ExtResource( 5 )
+params/resize_mode = 0
+params/scale = Vector2( 0.3, 0.3 )
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PlayLbl" type="Label" parent="Controls/Buttons/Play"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 137.0
+margin/top = 20.0
+margin/right = 460.0
+margin/bottom = 73.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Play"
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Options" type="TextureButton" parent="Controls/Buttons"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -159.0
+margin/top = 340.0
+margin/right = -69.0
+margin/bottom = 430.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 6 )
+textures/pressed = ExtResource( 7 )
+params/resize_mode = 0
+params/scale = Vector2( 0.3, 0.3 )
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="OptionsLbl" type="Label" parent="Controls/Buttons/Options"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 137.0
+margin/top = 18.0
+margin/right = 459.0
+margin/bottom = 71.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Options"
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="About" type="TextureButton" parent="Controls/Buttons"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -159.0
+margin/top = 470.0
+margin/right = -69.0
+margin/bottom = 560.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 8 )
+textures/pressed = ExtResource( 9 )
+params/resize_mode = 0
+params/scale = Vector2( 0.3, 0.3 )
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AboutLbl" type="Label" parent="Controls/Buttons/About"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 137.0
+margin/top = 19.0
+margin/right = 458.0
+margin/bottom = 72.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "About"
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Mute" parent="Controls" instance=ExtResource( 10 )]
+
+editor/display_folded = true
+
+[node name="HowPlay" type="Node2D" parent="Controls"]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="HowPlayButton" type="TextureButton" parent="Controls/HowPlay"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 25.0
+margin/top = 574.0
+margin/right = 145.0
+margin/bottom = 694.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 11 )
+textures/pressed = ExtResource( 12 )
+params/resize_mode = 0
+params/scale = Vector2( 0.4, 0.4 )
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="HowPlayLabel" type="Label" parent="Controls/HowPlay/HowPlayButton"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 145.0
+margin/top = 34.0
+margin/right = 504.0
+margin/bottom = 87.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "How to Play"
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+
+[editable path="Controls/Mute"]

@@ -1,0 +1,1751 @@
+[gd_scene load_steps=29 format=1]
+
+[ext_resource path="res://scripts/Levels.gd" type="Script" id=1]
+[ext_resource path="res://assets/levels/world1.png" type="Texture" id=2]
+[ext_resource path="res://assets/levels/default.png" type="Texture" id=3]
+[ext_resource path="res://assets/levels/pressed.png" type="Texture" id=4]
+[ext_resource path="res://assets/levels/stage11.png" type="Texture" id=5]
+[ext_resource path="res://assets/fonts/strippe/strippe.fnt" type="BitmapFont" id=6]
+[ext_resource path="res://assets/levels/padlock_unlocked.png" type="Texture" id=7]
+[ext_resource path="res://assets/levels/stage12.png" type="Texture" id=8]
+[ext_resource path="res://assets/levels/padlockLocked.png" type="Texture" id=9]
+[ext_resource path="res://assets/levels/stage13.png" type="Texture" id=10]
+[ext_resource path="res://assets/levels/stage14.png" type="Texture" id=11]
+[ext_resource path="res://assets/levels/stage15.png" type="Texture" id=12]
+[ext_resource path="res://assets/levels/stage16.png" type="Texture" id=13]
+[ext_resource path="res://assets/levels/stage21.png" type="Texture" id=14]
+[ext_resource path="res://assets/levels/stage22.png" type="Texture" id=15]
+[ext_resource path="res://assets/levels/stage23.png" type="Texture" id=16]
+[ext_resource path="res://assets/levels/stage24.png" type="Texture" id=17]
+[ext_resource path="res://assets/levels/stage25.png" type="Texture" id=18]
+[ext_resource path="res://assets/levels/stage26.png" type="Texture" id=19]
+[ext_resource path="res://assets/levels/stage31.png" type="Texture" id=20]
+[ext_resource path="res://assets/levels/stage32.png" type="Texture" id=21]
+[ext_resource path="res://assets/levels/stage33.png" type="Texture" id=22]
+[ext_resource path="res://assets/levels/stage34.png" type="Texture" id=23]
+[ext_resource path="res://assets/levels/stage35.png" type="Texture" id=24]
+[ext_resource path="res://assets/levels/stage36.png" type="Texture" id=25]
+[ext_resource path="res://assets/levels/world2.png" type="Texture" id=26]
+[ext_resource path="res://assets/levels/world3.png" type="Texture" id=27]
+[ext_resource path="res://scenes/BackButton.tscn" type="PackedScene" id=28]
+
+[node name="Levels" type="Node2D"]
+
+transform/pos = Vector2( 641.411, 359.256 )
+transform/scale = Vector2( 20.0501, 11.2327 )
+script/script = ExtResource( 1 )
+
+[node name="Controls" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="Background" type="Node2D" parent="Controls"]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Image" type="TextureFrame" parent="Controls/Background"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1280.0
+margin/bottom = 720.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WorldLevels1" type="Node2D" parent="Controls"]
+
+editor/display_folded = true
+visibility/visible = false
+transform/scale = Vector2( 19.2488, 2.59478 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="W1Level1" type="TextureButton" parent="Controls/WorldLevels1"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.008, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -26.0
+margin/top = 21.0
+margin/right = 1559.0
+margin/bottom = 921.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+textures/pressed = ExtResource( 4 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LevelFrame" type="TextureFrame" parent="Controls/WorldLevels1/W1Level1"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 161.0
+margin/top = 87.0
+margin/right = 1747.0
+margin/bottom = 987.0
+texture = ExtResource( 5 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Score" type="Label" parent="Controls/WorldLevels1/W1Level1"]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 268.0
+margin/top = 575.0
+margin/right = 476.0
+margin/bottom = 628.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.960938, 0.114164, 0.0938416, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00:00:00"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/WorldLevels1/W1Level1"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 307.0
+texture = ExtResource( 7 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="W1Level2" type="TextureButton" parent="Controls/WorldLevels1"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.008, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -6.0
+margin/top = 21.0
+margin/right = 1579.0
+margin/bottom = 921.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LevelFrame" type="TextureFrame" parent="Controls/WorldLevels1/W1Level2"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 161.0
+margin/top = 87.0
+margin/right = 1747.0
+margin/bottom = 987.0
+texture = ExtResource( 8 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Score" type="Label" parent="Controls/WorldLevels1/W1Level2"]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 268.0
+margin/top = 575.0
+margin/right = 476.0
+margin/bottom = 628.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.960938, 0.114164, 0.0938416, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00:00:00"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/WorldLevels1/W1Level2"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 307.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="W1Level3" type="TextureButton" parent="Controls/WorldLevels1"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.008, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 14.0
+margin/top = 21.0
+margin/right = 1599.0
+margin/bottom = 921.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LevelFrame" type="TextureFrame" parent="Controls/WorldLevels1/W1Level3"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 161.0
+margin/top = 87.0
+margin/right = 1747.0
+margin/bottom = 987.0
+texture = ExtResource( 10 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Score" type="Label" parent="Controls/WorldLevels1/W1Level3"]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 268.0
+margin/top = 575.0
+margin/right = 476.0
+margin/bottom = 628.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.960938, 0.114164, 0.0938416, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00:00:00"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/WorldLevels1/W1Level3"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 308.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="W1Level4" type="TextureButton" parent="Controls/WorldLevels1"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.008, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -26.0
+margin/top = 105.0
+margin/right = 1559.0
+margin/bottom = 1005.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LevelFrame" type="TextureFrame" parent="Controls/WorldLevels1/W1Level4"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 161.0
+margin/top = 87.0
+margin/right = 1747.0
+margin/bottom = 987.0
+texture = ExtResource( 11 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Score" type="Label" parent="Controls/WorldLevels1/W1Level4"]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 268.0
+margin/top = 575.0
+margin/right = 476.0
+margin/bottom = 628.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.960938, 0.114164, 0.0938416, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00:00:00"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/WorldLevels1/W1Level4"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 308.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="W1Level5" type="TextureButton" parent="Controls/WorldLevels1"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.008, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -6.0
+margin/top = 105.0
+margin/right = 1579.0
+margin/bottom = 1005.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LevelFrame" type="TextureFrame" parent="Controls/WorldLevels1/W1Level5"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 161.0
+margin/top = 87.0
+margin/right = 1747.0
+margin/bottom = 987.0
+texture = ExtResource( 12 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Score" type="Label" parent="Controls/WorldLevels1/W1Level5"]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 268.0
+margin/top = 575.0
+margin/right = 476.0
+margin/bottom = 628.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.960938, 0.114164, 0.0938416, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00:00:00"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/WorldLevels1/W1Level5"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 308.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="W1Level6" type="TextureButton" parent="Controls/WorldLevels1"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.008, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 14.0
+margin/top = 105.0
+margin/right = 1599.0
+margin/bottom = 1005.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LevelFrame" type="TextureFrame" parent="Controls/WorldLevels1/W1Level6"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 161.0
+margin/top = 87.0
+margin/right = 1747.0
+margin/bottom = 987.0
+texture = ExtResource( 13 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Score" type="Label" parent="Controls/WorldLevels1/W1Level6"]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 268.0
+margin/top = 575.0
+margin/right = 476.0
+margin/bottom = 628.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.960938, 0.114164, 0.0938416, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00:00:00"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/WorldLevels1/W1Level6"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 308.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WorldLevels2" type="Node2D" parent="Controls"]
+
+editor/display_folded = true
+visibility/visible = false
+transform/scale = Vector2( 19.2488, 2.59478 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="W2Level1" type="TextureButton" parent="Controls/WorldLevels2"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.008, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -26.0
+margin/top = 21.0
+margin/right = 1559.0
+margin/bottom = 921.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LevelFrame" type="TextureFrame" parent="Controls/WorldLevels2/W2Level1"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 161.0
+margin/top = 87.0
+margin/right = 1747.0
+margin/bottom = 987.0
+texture = ExtResource( 14 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Score" type="Label" parent="Controls/WorldLevels2/W2Level1"]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 268.0
+margin/top = 575.0
+margin/right = 476.0
+margin/bottom = 628.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.960938, 0.114164, 0.0938416, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00:00:00"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/WorldLevels2/W2Level1"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 307.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="W2Level2" type="TextureButton" parent="Controls/WorldLevels2"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.008, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -6.0
+margin/top = 21.0
+margin/right = 1579.0
+margin/bottom = 921.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LevelFrame" type="TextureFrame" parent="Controls/WorldLevels2/W2Level2"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 161.0
+margin/top = 87.0
+margin/right = 1747.0
+margin/bottom = 987.0
+texture = ExtResource( 15 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Score" type="Label" parent="Controls/WorldLevels2/W2Level2"]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 268.0
+margin/top = 575.0
+margin/right = 476.0
+margin/bottom = 628.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.960938, 0.114164, 0.0938416, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00:00:00"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/WorldLevels2/W2Level2"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 307.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="W2Level3" type="TextureButton" parent="Controls/WorldLevels2"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.008, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 14.0
+margin/top = 21.0
+margin/right = 1599.0
+margin/bottom = 921.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LevelFrame" type="TextureFrame" parent="Controls/WorldLevels2/W2Level3"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 161.0
+margin/top = 87.0
+margin/right = 1747.0
+margin/bottom = 987.0
+texture = ExtResource( 16 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Score" type="Label" parent="Controls/WorldLevels2/W2Level3"]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 268.0
+margin/top = 575.0
+margin/right = 476.0
+margin/bottom = 628.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.960938, 0.114164, 0.0938416, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00:00:00"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/WorldLevels2/W2Level3"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 308.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="W2Level4" type="TextureButton" parent="Controls/WorldLevels2"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.008, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -26.0
+margin/top = 105.0
+margin/right = 1559.0
+margin/bottom = 1005.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LevelFrame" type="TextureFrame" parent="Controls/WorldLevels2/W2Level4"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 161.0
+margin/top = 87.0
+margin/right = 1747.0
+margin/bottom = 987.0
+texture = ExtResource( 17 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Score" type="Label" parent="Controls/WorldLevels2/W2Level4"]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 268.0
+margin/top = 575.0
+margin/right = 476.0
+margin/bottom = 628.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.960938, 0.114164, 0.0938416, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00:00:00"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/WorldLevels2/W2Level4"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 308.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="W2Level5" type="TextureButton" parent="Controls/WorldLevels2"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.008, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -6.0
+margin/top = 105.0
+margin/right = 1579.0
+margin/bottom = 1005.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LevelFrame" type="TextureFrame" parent="Controls/WorldLevels2/W2Level5"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 161.0
+margin/top = 87.0
+margin/right = 1747.0
+margin/bottom = 987.0
+texture = ExtResource( 18 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Score" type="Label" parent="Controls/WorldLevels2/W2Level5"]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 268.0
+margin/top = 575.0
+margin/right = 476.0
+margin/bottom = 628.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.960938, 0.114164, 0.0938416, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00:00:00"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/WorldLevels2/W2Level5"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 308.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="W2Level6" type="TextureButton" parent="Controls/WorldLevels2"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.008, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 14.0
+margin/top = 105.0
+margin/right = 1599.0
+margin/bottom = 1005.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LevelFrame" type="TextureFrame" parent="Controls/WorldLevels2/W2Level6"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 161.0
+margin/top = 87.0
+margin/right = 1747.0
+margin/bottom = 987.0
+texture = ExtResource( 19 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Score" type="Label" parent="Controls/WorldLevels2/W2Level6"]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 268.0
+margin/top = 575.0
+margin/right = 476.0
+margin/bottom = 628.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.960938, 0.114164, 0.0938416, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00:00:00"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/WorldLevels2/W2Level6"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 308.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WorldLevels3" type="Node2D" parent="Controls"]
+
+visibility/visible = false
+transform/scale = Vector2( 19.2488, 2.59478 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="W3Level1" type="TextureButton" parent="Controls/WorldLevels3"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.008, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -26.0
+margin/top = 21.0
+margin/right = 1559.0
+margin/bottom = 921.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LevelFrame" type="TextureFrame" parent="Controls/WorldLevels3/W3Level1"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 161.0
+margin/top = 87.0
+margin/right = 1747.0
+margin/bottom = 987.0
+texture = ExtResource( 20 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Score" type="Label" parent="Controls/WorldLevels3/W3Level1"]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 268.0
+margin/top = 575.0
+margin/right = 476.0
+margin/bottom = 628.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.960938, 0.114164, 0.0938416, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00:00:00"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/WorldLevels3/W3Level1"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 307.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="W3Level2" type="TextureButton" parent="Controls/WorldLevels3"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.008, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -6.0
+margin/top = 21.0
+margin/right = 1579.0
+margin/bottom = 921.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LevelFrame" type="TextureFrame" parent="Controls/WorldLevels3/W3Level2"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 161.0
+margin/top = 87.0
+margin/right = 1747.0
+margin/bottom = 987.0
+texture = ExtResource( 21 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Score" type="Label" parent="Controls/WorldLevels3/W3Level2"]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 268.0
+margin/top = 575.0
+margin/right = 476.0
+margin/bottom = 628.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.960938, 0.114164, 0.0938416, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00:00:00"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/WorldLevels3/W3Level2"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 307.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="W3Level3" type="TextureButton" parent="Controls/WorldLevels3"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.008, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 14.0
+margin/top = 21.0
+margin/right = 1599.0
+margin/bottom = 921.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LevelFrame" type="TextureFrame" parent="Controls/WorldLevels3/W3Level3"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 161.0
+margin/top = 87.0
+margin/right = 1747.0
+margin/bottom = 987.0
+texture = ExtResource( 22 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Score" type="Label" parent="Controls/WorldLevels3/W3Level3"]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 268.0
+margin/top = 575.0
+margin/right = 476.0
+margin/bottom = 628.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.960938, 0.114164, 0.0938416, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00:00:00"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/WorldLevels3/W3Level3"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 308.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="W3Level4" type="TextureButton" parent="Controls/WorldLevels3"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.008, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -26.0
+margin/top = 105.0
+margin/right = 1559.0
+margin/bottom = 1005.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LevelFrame" type="TextureFrame" parent="Controls/WorldLevels3/W3Level4"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 161.0
+margin/top = 87.0
+margin/right = 1747.0
+margin/bottom = 987.0
+texture = ExtResource( 23 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Score" type="Label" parent="Controls/WorldLevels3/W3Level4"]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 268.0
+margin/top = 575.0
+margin/right = 476.0
+margin/bottom = 628.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.960938, 0.114164, 0.0938416, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00:00:00"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/WorldLevels3/W3Level4"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 308.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="W3Level5" type="TextureButton" parent="Controls/WorldLevels3"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.008, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -6.0
+margin/top = 105.0
+margin/right = 1579.0
+margin/bottom = 1005.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LevelFrame" type="TextureFrame" parent="Controls/WorldLevels3/W3Level5"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 161.0
+margin/top = 87.0
+margin/right = 1747.0
+margin/bottom = 987.0
+texture = ExtResource( 24 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Score" type="Label" parent="Controls/WorldLevels3/W3Level5"]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 268.0
+margin/top = 575.0
+margin/right = 476.0
+margin/bottom = 628.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.960938, 0.114164, 0.0938416, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00:00:00"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/WorldLevels3/W3Level5"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 308.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="W3Level6" type="TextureButton" parent="Controls/WorldLevels3"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.008, 0.08 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 14.0
+margin/top = 105.0
+margin/right = 1599.0
+margin/bottom = 1005.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LevelFrame" type="TextureFrame" parent="Controls/WorldLevels3/W3Level6"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 161.0
+margin/top = 87.0
+margin/right = 1747.0
+margin/bottom = 987.0
+texture = ExtResource( 25 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Score" type="Label" parent="Controls/WorldLevels3/W3Level6"]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 268.0
+margin/top = 575.0
+margin/right = 476.0
+margin/bottom = 628.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.960938, 0.114164, 0.0938416, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "00:00:00"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/WorldLevels3/W3Level6"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 308.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Worlds" type="Node2D" parent="Controls"]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="World1" type="TextureButton" parent="Controls/Worlds"]
+
+editor/display_folded = true
+rect/scale = Vector2( 0.15, 0.2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -442.0
+margin/top = 501.0
+margin/right = 1143.0
+margin/bottom = 1401.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+textures/pressed = ExtResource( 4 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WorldFrame" type="TextureFrame" parent="Controls/Worlds/World1"]
+
+rect/scale = Vector2( 0.65, 0.65 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 171.0
+margin/top = 92.0
+margin/right = 1756.0
+margin/bottom = 984.0
+texture = ExtResource( 2 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WorldLbl" type="Label" parent="Controls/Worlds/World1"]
+
+rect/scale = Vector2( 4, 4 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 180.0
+margin/top = 537.0
+margin/right = 497.0
+margin/bottom = 590.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.910156, 0.885991, 0.291534, 1 )
+custom_colors/font_color_shadow = Color( 0.013916, 0.0570048, 0.148438, 1 )
+custom_constants/shadow_as_outline = 1
+text = "World 1"
+align = 1
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/Worlds/World1"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 307.0
+texture = ExtResource( 7 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="World2" type="TextureButton" parent="Controls/Worlds"]
+
+rect/scale = Vector2( 0.15, 0.2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -121.0
+margin/top = 501.0
+margin/right = 1464.0
+margin/bottom = 1401.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WorldFrame" type="TextureFrame" parent="Controls/Worlds/World2"]
+
+rect/scale = Vector2( 0.65, 0.65 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 171.0
+margin/top = 92.0
+margin/right = 1756.0
+margin/bottom = 984.0
+texture = ExtResource( 26 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WorldLbl" type="Label" parent="Controls/Worlds/World2"]
+
+rect/scale = Vector2( 4, 4 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 180.0
+margin/top = 537.0
+margin/right = 497.0
+margin/bottom = 590.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.148941, 0.886719, 0.765677, 1 )
+custom_colors/font_color_shadow = Color( 0.0122833, 0.0521415, 0.136719, 1 )
+custom_constants/shadow_as_outline = 1
+text = "World 2"
+align = 1
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/Worlds/World2"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 307.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="World3" type="TextureButton" parent="Controls/Worlds"]
+
+rect/scale = Vector2( 0.15, 0.2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 205.0
+margin/top = 501.0
+margin/right = 1790.0
+margin/bottom = 1401.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WorldFrame" type="TextureFrame" parent="Controls/Worlds/World3"]
+
+rect/scale = Vector2( 0.65, 0.65 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 171.0
+margin/top = 92.0
+margin/right = 1756.0
+margin/bottom = 984.0
+texture = ExtResource( 27 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WorldLbl" type="Label" parent="Controls/Worlds/World3"]
+
+rect/scale = Vector2( 4, 4 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 180.0
+margin/top = 537.0
+margin/right = 497.0
+margin/bottom = 590.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.125031, 0.692667, 0.941406, 1 )
+custom_colors/font_color_shadow = Color( 0.0122833, 0.0521415, 0.136719, 1 )
+custom_constants/shadow_as_outline = 1
+text = "World 3"
+align = 1
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Padlock" type="TextureFrame" parent="Controls/Worlds/World3"]
+
+rect/scale = Vector2( 1, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1265.0
+margin/top = 7.0
+margin/right = 1480.0
+margin/bottom = 307.0
+texture = ExtResource( 9 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Back" parent="Controls" instance=ExtResource( 28 )]
+
+

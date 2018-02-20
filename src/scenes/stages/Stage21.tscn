@@ -1,0 +1,189 @@
+[gd_scene load_steps=11 format=1]
+
+[ext_resource path="res://scripts/stages/Stage21.gd" type="Script" id=1]
+[ext_resource path="res://scenes/stages/extras/backgrounds/WinterBG.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/tilesets/Snow.xml" type="TileSet" id=3]
+[ext_resource path="res://scenes/stages/extras/KillZone.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/stages/extras/MovingPlatformX.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/monsters/Bobo.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/monsters/RocoSteel.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/coins/Coin.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/hazzards/RotatingFire.tscn" type="PackedScene" id=10]
+
+[node name="Stage21" type="Node2D"]
+
+script/script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Winter" parent="." instance=ExtResource( 2 )]
+
+offset = Vector2( 0, -400 )
+
+[node name="TileMap" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 3 )
+cell/size = Vector2( 64, 64 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( 262173, 17, 262174, 14, 262175, 12, 262178, 12, 262181, 12, 262184, 17, 262185, 0, 262186, 0, 262187, 0, 262188, 0, 262189, 14, 262207, 8, 262210, 8, 262211, 8, 327709, 16, 327710, 15, 327720, 16, 327721, 2, 327722, 2, 327723, 2, 327724, 2, 327725, 15, 327731, 11, 327765, 13, 393240, 17, 393241, 0, 393242, 14, 393262, 17, 393263, 0, 393264, 0, 393265, 0, 393266, 0, 393267, 0, 393268, 0, 393269, 14, 393270, 12, 393273, 12, 393276, 12, 393279, 17, 393280, 0, 393281, 0, 393282, 0, 393283, 14, 393299, 13, 393303, 13, 393309, 17, 393310, 14, 393311, 12, 393314, 12, 393317, 12, 393320, 17, 393321, 14, 458776, 16, 458777, 2, 458778, 15, 458798, 16, 458799, 2, 458800, 2, 458801, 2, 458802, 2, 458803, 2, 458804, 2, 458805, 15, 458815, 16, 458816, 2, 458817, 2, 458818, 2, 458819, 15, 458834, 7, 458845, 16, 458846, 15, 458856, 16, 458857, 15, 589818, 10, 589819, 10, 589820, 10, 524306, 17, 524307, 0, 524308, 0, 524309, 14, 655353, 17, 655354, 0, 655355, 0, 655356, 0, 655357, 0, 655358, 0, 655359, 0, 589824, 0, 589825, 0, 589826, 0, 589827, 0, 589828, 0, 589829, 14, 589834, 17, 589835, 0, 589836, 0, 589837, 0, 589838, 14, 589842, 16, 589843, 2, 589844, 2, 589845, 15, 720889, 3, 720890, 4, 720891, 4, 720892, 4, 720893, 4, 720894, 4, 720895, 4, 655360, 4, 655361, 4, 655362, 4, 655363, 4, 655364, 4, 655365, 1, 655370, 16, 655371, 2, 655372, 2, 655373, 2, 655374, 15, 786425, 16, 786426, 2, 786427, 2, 786428, 2, 786429, 2, 786430, 2, 786431, 2, 720896, 2, 720897, 2, 720898, 2, 720899, 2, 720900, 2, 720901, 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="KillZones" type="Node2D" parent="."]
+
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="KillZone" parent="KillZones" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 213.248, 708.93 )
+
+[node name="KillZone1" parent="KillZones" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 3125, 708.93 )
+
+[node name="KillZone2" parent="KillZones" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 6030, 708.93 )
+
+[node name="KillZone3" parent="KillZones" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 7423.62, 691.806 )
+transform/rot = 90.0
+
+[node name="KillZone4" parent="KillZones" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( -1174.33, 691.806 )
+transform/rot = 90.0
+
+[node name="MovingPlatforms" type="Node2D" parent="."]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MovingPlatformX" parent="MovingPlatforms" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 4508, 435.532 )
+
+[node name="Monsters" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 3000, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Bobo" parent="Monsters" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 52.6987, 342.72 )
+
+[node name="Bobo2" parent="Monsters" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 2495.9, 287.235 )
+
+[node name="RocoSteel" parent="Monsters" instance=ExtResource( 7 )]
+
+editor/display_folded = true
+transform/pos = Vector2( 1256.99, 259.858 )
+
+[node name="Coins" type="Node2D" parent="."]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Coin" parent="Coins" instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 742.671, 533.716 )
+
+[node name="Coin1" parent="Coins" instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 1268.83, 458.19 )
+
+[node name="Coin2" parent="Coins" instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 1636.39, 339.866 )
+
+[node name="Coin3" parent="Coins" instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 1913.32, 206.437 )
+
+[node name="Coin4" parent="Coins" instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 2746.62, 206.437 )
+
+[node name="Coin5" parent="Coins" instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 3229.56, 343.835 )
+
+[node name="Coin6" parent="Coins" instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 4158.52, 346.352 )
+
+[node name="Coin7" parent="Coins" instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 5623.73, 346.352 )
+
+[node name="Coin8" parent="Coins" instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 6003.89, 344.813 )
+
+[node name="Coin9" parent="Coins" instance=ExtResource( 8 )]
+
+transform/pos = Vector2( 6717.91, 348.936 )
+
+[node name="Player" parent="." instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -294.865, 502.152 )
+
+[node name="Hazzards" type="Node2D" parent="."]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RotatingFire" parent="Hazzards" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 426.54, 543.993 )
+
+[node name="RotatingFire1" parent="Hazzards" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 2273.37, 263.187 )
+
+[node name="RotatingFire2" parent="Hazzards" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 2730.64, 47.8795 )
+
+[node name="RotatingFire3" parent="Hazzards" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 3749.56, 460.072 )
+
+[node name="RotatingFire4" parent="Hazzards" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 6175.14, 213.646 )
+
+[node name="RotatingFire5" parent="Hazzards" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 6493.61, 475.157 )
+
+
+[editable path="Monsters/RocoSteel"]

@@ -1,0 +1,189 @@
+[gd_scene load_steps=13 format=1]
+
+[ext_resource path="res://scripts/stages/Stage16.gd" type="Script" id=1]
+[ext_resource path="res://scenes/stages/extras/backgrounds/CloudsHD.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/tilesets/Grass.xml" type="TileSet" id=3]
+[ext_resource path="res://scenes/stages/extras/KillZone.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/stages/extras/MovingPlatformY.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/stages/extras/MovingPlatformCircling.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/stages/extras/MovingPlatformX.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/stages/extras/MovingPlatformDiagonal.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/monsters/Gobo.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/coins/Coin.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/coins/VerticalCoin.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=12]
+
+[node name="Stage16" type="Node2D"]
+
+script/script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Clouds" parent="." instance=ExtResource( 2 )]
+
+[node name="TileMap" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 3 )
+cell/size = Vector2( 64, 64 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -3407889, 12, -3407888, 11, -3407881, 12, -3407880, 11, -3473399, 12, -3473398, 11, -3473391, 12, -3473390, 11, -3473388, 24, -3473387, 21, -3473383, 24, -3473382, 21, -3407852, 14, -3407851, 17, -3407850, 21, -3407848, 24, -3407847, 18, -3407846, 13, -3342316, 23, -3342315, 15, -3342314, 22, -3342312, 23, -3342311, 15, -3342310, 22, -3211285, 12, -3211284, 11, -2424873, 12, -2424872, 11, -1769514, 12, -1769513, 11, -1572901, 12, -1572900, 11, -1572884, 12, -1572883, 11, -1507353, 12, -1507352, 11, -1441807, 12, -1441806, 11, -1376290, 12, -1376289, 11, -1310749, 12, -1310748, 11, -1245195, 12, -1245194, 11, -1245130, 12, -1245129, 11, -1048590, 12, -1048589, 11, -1048524, 12, -1048523, 11, -983021, 24, -983020, 0, -983019, 0, -983018, 0, -983017, 0, -983016, 21, -851985, 12, -851984, 11, -917485, 23, -917484, 15, -917483, 15, -917482, 15, -917481, 15, -917480, 22, -917463, 24, -917462, 0, -917461, 0, -917460, 0, -917459, 0, -917458, 0, -917457, 0, -917456, 0, -917455, 0, -917454, 21, -851927, 14, -851926, 1, -851925, 1, -851924, 1, -851923, 1, -851922, 1, -851921, 1, -851920, 1, -851919, 1, -851918, 13, -720910, 12, -720909, 11, -786391, 23, -786390, 15, -786389, 15, -786388, 15, -786387, 15, -786386, 15, -786385, 15, -786384, 15, -786383, 15, -786382, 22, -655369, 24, -655368, 0, -655367, 21, -720889, 12, -720888, 11, -589833, 23, -589832, 15, -589831, 22, -524292, 24, -524291, 0, -524290, 21, -458756, 23, -458755, 15, -458754, 22, -458751, 24, -458750, 0, -458749, 21, -393215, 23, -393214, 15, -393213, 22, -393189, 3, 65571, 26, 131107, 30, 196643, 30, 196645, 26, 262179, 30, 262181, 30, 327715, 30, 327717, 30, 327719, 26, 393251, 30, 393253, 30, 393255, 30, 458787, 30, 458789, 30, 458791, 30, 458793, 26, 458794, 8, 458796, 7, 458798, 26, 524323, 30, 524325, 30, 524327, 30, 524329, 14, 524334, 13, 589829, 24, 589830, 0, 589831, 0, 589832, 0, 589833, 0, 589834, 0, 589835, 0, 589836, 21, 589859, 30, 589861, 30, 589863, 30, 589865, 14, 589866, 1, 589867, 1, 589868, 1, 589869, 1, 589870, 13, 655365, 14, 655366, 1, 655367, 1, 655368, 1, 655369, 1, 655370, 1, 655371, 1, 655372, 13, 655395, 30, 655397, 30, 655399, 30, 655401, 14, 655402, 1, 655403, 1, 655404, 1, 655405, 1, 655406, 13, 720901, 14, 720902, 1, 720903, 1, 720904, 1, 720905, 1, 720906, 1, 720907, 1, 720908, 13, 720931, 30, 720933, 30, 720935, 30, 720937, 14, 720938, 1, 720939, 1, 720940, 1, 720941, 1, 720942, 13, 786437, 14, 786438, 1, 786439, 1, 786440, 1, 786441, 1, 786442, 1, 786443, 1, 786444, 13, 786467, 30, 786469, 30, 786471, 30, 786473, 14, 786474, 1, 786475, 1, 786476, 1, 786477, 1, 786478, 13, 851973, 14, 851974, 1, 851975, 1, 851976, 1, 851977, 1, 851978, 1, 851979, 1, 851980, 13, 852003, 30, 852005, 30, 852007, 30, 852009, 14, 852010, 1, 852011, 1, 852012, 1, 852013, 1, 852014, 13, 917509, 14, 917510, 1, 917511, 1, 917512, 1, 917513, 1, 917514, 1, 917515, 1, 917516, 13, 917539, 28, 917541, 28, 917543, 28, 917545, 23, 917546, 15, 917547, 15, 917548, 15, 917549, 15, 917550, 22, 983045, 14, 983046, 1, 983047, 1, 983048, 1, 983049, 1, 983050, 1, 983051, 1, 983052, 13, 1048581, 14, 1048582, 1, 1048583, 1, 1048584, 1, 1048585, 1, 1048586, 1, 1048587, 1, 1048588, 13, 1114117, 23, 1114118, 15, 1114119, 15, 1114120, 15, 1114121, 15, 1114122, 15, 1114123, 15, 1114124, 22 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="KillZones" type="Node2D" parent="."]
+
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="KillZone" parent="KillZones" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 2666.14, 1000 )
+
+[node name="KillZone1" parent="KillZones" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 109.013, 1000 )
+
+[node name="KillZone2" parent="KillZones" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( -2448.69, 1000 )
+
+[node name="KillZone3" parent="KillZones" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( -5006.9, 1000 )
+
+[node name="KillZone4" parent="KillZones" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 5223.26, 1000 )
+
+[node name="KillZone5" parent="KillZones" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 5455.56, -515.103 )
+transform/rot = 90.0
+
+[node name="KillZone6" parent="KillZones" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 5455.56, -3402.2 )
+transform/rot = 90.0
+
+[node name="KillZone8" parent="KillZones" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( -5455.56, -515.103 )
+transform/rot = 90.0
+
+[node name="KillZone7" parent="KillZones" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( -5455.56, -3402.2 )
+transform/rot = 90.0
+
+[node name="MovingPlatforms" type="Node2D" parent="."]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MovingPlatformY" parent="MovingPlatforms" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 552.092, 4.59863 )
+
+[node name="MovingPlatformCircling" parent="MovingPlatforms" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 957.573, -664.801 )
+
+[node name="MovingPlatformX" parent="MovingPlatforms" instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 1888.8, -899.814 )
+
+[node name="MovingPlatformY 2" parent="MovingPlatforms" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 2048.35, -351.633 )
+
+[node name="MovingPlatformY 3" parent="MovingPlatforms" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -2888.57, -2201.88 )
+
+[node name="MovingPlatformDiagonal" parent="MovingPlatforms" instance=ExtResource( 8 )]
+
+transform/pos = Vector2( -1784.87, -2998.52 )
+
+[node name="MovingPlatformX 2" parent="MovingPlatforms" instance=ExtResource( 7 )]
+
+transform/pos = Vector2( -218.646, -3359.59 )
+
+[node name="Monsters" type="Node2D" parent="."]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Gobo" parent="Monsters" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 3145.88, -938.183 )
+
+[node name="Coins" type="Node2D" parent="."]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Coin" parent="Coins" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 1400.26, -998.809 )
+
+[node name="Coin 2" parent="Coins" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 2927.85, -935.136 )
+
+[node name="Coin 3" parent="Coins" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 2399.93, 145.59 )
+
+[node name="Coin 4" parent="Coins" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 2814.03, 497.424 )
+
+[node name="Coin 5" parent="Coins" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 1506.34, -3163.3 )
+
+[node name="Coin 6" parent="Coins" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( -1952.31, -1601.17 )
+
+[node name="Coin 7" parent="Coins" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( -1026.54, -3433.89 )
+
+[node name="Coin 8" parent="Coins" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( -2635.65, -1891.68 )
+
+[node name="Coin 9" parent="Coins" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 3514.22, -1268.92 )
+
+[node name="Coin 10" parent="Coins" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( -163.065, -633.623 )
+
+[node name="Player" parent="." instance=ExtResource( 12 )]
+
+transform/pos = Vector2( 535.155, 504.788 )
+
+

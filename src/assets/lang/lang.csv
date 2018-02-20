@@ -1,0 +1,25 @@
+id,es,ca,en
+MENU_PLAY,Jugar,Jugar,Play
+MENU_OPTIONS,Opciones,Opcions,Options
+MENU_ABOUT,Acerca de,Sobre,About
+MENU_EXIT,Salir,Sortir,Exit
+MENU_HOWPLAY,Como Jugar,Com Jugar,How to Play
+MENU_ABOUT_CREDITS,Creditos,Credits,Credits
+OPTIONS_VOLUME,Volumen,Volum,Volume
+OPTIONS_MUSIC,Música,Música,Music
+OPTIONS_SOUND,Sonido,So,Sound
+MENU_LEVELS_WORLD,Mundo,Món,World
+PLAYER_PAUSE,Pausa,Pausa,Pause
+PLAYER_DEAD,Has Muerto,Has Mort,You Died
+PLAYER_MENU,Ir al Menú,Anar al Menú,Back to Menu
+PLAYER_PAUSE_RESUME,Volver al Juego,Tornar al Joc,Back to Game
+PLAYER_DEAD_PAUSE_WON_RETRY,Reintentar,Reintentar,Retry game
+PLAYER_WON,Has Ganado,Has Guanyat,You Won
+CONGRATULATIONS,¡Enhorabuena!,Enhorabona!,Congratulations!
+PLAYER_WON_CONTINUE,Continuar,Continuar,Continue
+HOWPLAY_HEART,Los corazones te dan una vida extra,Els cors et donen una vida extra,Hearts give you an extra life
+HOWPLAY_COIN,Tienes que coger las 10 monedas en cada Nivel,Has d'agafar les 10 monedes a cada Nivell, You have to catch 10 coins every Stage
+HOWPLAY_GOBO,Este enemigo no puede morir ¡esquivalo!,Aquest enemic no pot morir esquiva-ho!,This enemy can't die just dodge it!
+HOWPLAY_KILLABLES,Estos enemigos pueden morir saltando sobre sus cabezas,Aquests enemics poden morir saltant sobre els seus caps,These enemies can die jumping upon their heads
+ABOUT_AUTHORS,"Autores:","Autors:","Authors:"
+ABOUT_RELEASE,Lanzamiento:,Llançament:,Release Date:

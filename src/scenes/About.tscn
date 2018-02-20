@@ -1,0 +1,259 @@
+[gd_scene load_steps=10 format=1]
+
+[ext_resource path="res://scripts/About.gd" type="Script" id=1]
+[ext_resource path="res://assets/menu/aboutBg.png" type="Texture" id=2]
+[ext_resource path="res://assets/fonts/strippe/strippe.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://assets/about/gplv3_license.png" type="Texture" id=4]
+[ext_resource path="res://assets/about/ies_escoladeltreball.png" type="Texture" id=5]
+[ext_resource path="res://scenes/BackButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/menu/credits.png" type="Texture" id=7]
+[ext_resource path="res://assets/menu/playPressed.png" type="Texture" id=8]
+[ext_resource path="res://scenes/Mute.tscn" type="PackedScene" id=9]
+
+[node name="About" type="Node2D"]
+
+script/script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Controls" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="Background" type="Node2D" parent="Controls"]
+
+editor/display_folded = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Image" type="TextureFrame" parent="Controls/Background"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1280.0
+margin/bottom = 720.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Main" type="Node2D" parent="Controls"]
+
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Title" type="Label" parent="Controls/Main"]
+
+rect/scale = Vector2( 2.5, 2.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 0
+margin/left = -625.0
+margin/top = 42.0
+margin/right = -125.0
+margin/bottom = 95.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.2, 0.611765, 0.8, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "About"
+align = 1
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Body" type="Node2D" parent="Controls"]
+
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Version" type="Label" parent="Controls/Body"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -560.0
+margin/top = 261.0
+margin/right = 840.0
+margin/bottom = 314.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "RunWithMe vX.X - Godot Engine X.X.X Branch"
+align = 1
+valign = 1
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Authors" type="Label" parent="Controls/Body"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -560.0
+margin/top = 338.0
+margin/right = 840.0
+margin/bottom = 391.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Authors: Sergi Marti, Manuel Martinez & Gerard Llado"
+align = 1
+valign = 1
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Release" type="Label" parent="Controls/Body"]
+
+rect/scale = Vector2( 0.7, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -490.0
+margin/top = 523.0
+margin/right = 910.0
+margin/bottom = 576.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.626587, 0.90625, 0.696503, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Release Date: DD/MM/YYYY"
+align = 1
+valign = 1
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="License" type="TextureFrame" parent="Controls/Body"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -167.0
+margin/top = 425.0
+margin/right = -40.0
+margin/bottom = 476.0
+texture = ExtResource( 4 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EscolaDelTreball" type="TextureFrame" parent="Controls/Body"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 40.0
+margin/top = 410.0
+margin/right = 229.0
+margin/bottom = 490.0
+texture = ExtResource( 5 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Back" parent="Controls" instance=ExtResource( 6 )]
+
+editor/display_folded = true
+
+[node name="BackBtn" parent="Controls/Back"]
+
+margin/right = 174.0
+margin/bottom = 145.0
+
+[node name="Credits" type="Node2D" parent="Controls"]
+
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CreditsBtn" type="TextureButton" parent="Controls/Credits"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 25.0
+margin/top = 575.0
+margin/right = 145.0
+margin/bottom = 695.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 7 )
+textures/pressed = ExtResource( 8 )
+params/resize_mode = 0
+params/scale = Vector2( 0.4, 0.4 )
+params/stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CreditsLabel" type="Label" parent="Controls/Credits/CreditsBtn"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 145.0
+margin/top = 34.0
+margin/right = 400.0
+margin/bottom = 87.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Credits"
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Mute" parent="Controls" instance=ExtResource( 9 )]
+
+editor/display_folded = true
+
+
+[editable path="Controls/Back"]
+[editable path="Controls/Mute"]
