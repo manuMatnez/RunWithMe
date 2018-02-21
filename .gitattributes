@@ -1,1 +1,2 @@
-src/scripts/*.gd linguist-language=GDScript
+* linguist-vendored
+*.gd linguist-language=GDScript
