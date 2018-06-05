@@ -6,7 +6,7 @@ extends Node2D
 # Copyright 2017, SMGames - Escola del Treball
 #
 
-const GAME_VER = "1.5e"
+const GAME_VER = "1.6"
 
 ## PLAYER SCRIPT ##
 var player_script = preload("res://scripts/Player.gd")
